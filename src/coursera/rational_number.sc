@@ -9,6 +9,8 @@ object rational_number {
     val numerator = x / g
     val denominator = y / g
     
+    def this(x: Int) = this(x, 1)
+    
     override def toString = s"$numerator / $denominator"
     
     def add(other: Rational) =
@@ -44,4 +46,6 @@ object rational_number {
   x.less(y)                                       //> res3: Boolean = true
   
   x.max(y)                                        //> res4: coursera.rational_number.Rational = 5 / 7
+  
+  new Rational(2)                                 //> res5: coursera.rational_number.Rational = 2 / 1
 }
