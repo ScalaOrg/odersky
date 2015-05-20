@@ -23,6 +23,8 @@ object rational_number {
       
     def neg = new Rational(-numerator, denominator)
     
+    def less(other: Rational) = numerator * other.denominator < other.numerator * denominator
+    
     private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
   }
   
@@ -34,4 +36,6 @@ object rational_number {
   x.sub(y).sub(z)                                 //> res1: coursera.rational_number.Rational = -79 / 42
   
   y.add(y)                                        //> res2: coursera.rational_number.Rational = 10 / 7
+  
+  x.less(y)                                       //> res3: Boolean = true
 }
