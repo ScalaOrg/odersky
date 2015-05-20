@@ -11,7 +11,12 @@ object rational_number {
     
     def this(x: Int) = this(x, 1)
     
-    override def toString = s"$numerator / $denominator"
+    override def toString = {
+      if (denominator != 1)
+        s"$numerator / $denominator"
+      else
+        numerator.toString
+    }
     
     def add(other: Rational) =
       new Rational(
@@ -47,5 +52,5 @@ object rational_number {
   
   x.max(y)                                        //> res4: coursera.rational_number.Rational = 5 / 7
   
-  new Rational(2)                                 //> res5: coursera.rational_number.Rational = 2 / 1
+  new Rational(2)                                 //> res5: coursera.rational_number.Rational = 2
 }
