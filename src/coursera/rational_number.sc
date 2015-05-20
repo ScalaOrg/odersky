@@ -25,6 +25,8 @@ object rational_number {
     
     def less(other: Rational) = numerator * other.denominator < other.numerator * denominator
     
+    def max(other: Rational) = if (less(other)) other else this
+    
     private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
   }
   
@@ -38,4 +40,6 @@ object rational_number {
   y.add(y)                                        //> res2: coursera.rational_number.Rational = 10 / 7
   
   x.less(y)                                       //> res3: Boolean = true
+  
+  x.max(y)                                        //> res4: coursera.rational_number.Rational = 5 / 7
 }
