@@ -2,6 +2,8 @@ package coursera
 
 object rational_number {
   class Rational(x: Int, y: Int) {
+    require(y != 0, "denominator must be non-zero")
+  
     private val g = gcd(x, y)
 
     val numerator = x / g
