@@ -1,4 +1,4 @@
-package coursera
+package coursera.functional_programming_principles.week_1_functions_and_evaluations
 
 object newton_square_root {
   def sqrt(x: Double): Double = { // <--- privatize non-public methods

@@ -1,4 +1,4 @@
-package coursera
+package coursera.functional_programming_principles.week_1_functions_and_evaluations
 
 object sqrt_fixed_point {
   def fixedPoint(f: Double => Double)(x: Double) = {

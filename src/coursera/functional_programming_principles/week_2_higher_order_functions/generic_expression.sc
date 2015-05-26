@@ -1,6 +1,6 @@
-package coursera
+package coursera.functional_programming_principles.week_2_higher_order_functions
 
-object higher_order_functions {
+object generic_expression {
   def generic_expression(f: Double => Double,
                          combiner: (Double, Double) => Double,
                          initial_value: Int)
