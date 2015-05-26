@@ -1,13 +1,13 @@
-package coursera.functional_programming_principles.week_3_class_hierarchies
+package coursera.functional_programming_principles.week_3_data_and_abstraction
 
 object binary_tree {
-  val t1 = EmptyTreeNode.add(5)                   //> t1  : coursera.functional_programming_principles.week_3_class_hierarchies.Tr
-                                                  //| eeNode = {. 5 .}
-  t1.add(5)                                       //> res0: coursera.functional_programming_principles.week_3_class_hierarchies.Bi
-                                                  //| naryTree = {. 5 .}
+  val t1 = EmptyTreeNode.add(5)                   //> t1  : coursera.functional_programming_principles.week_3_data_and_abstraction
+                                                  //| .TreeNode = {. 5 .}
+  t1.add(5)                                       //> res0: coursera.functional_programming_principles.week_3_data_and_abstraction
+                                                  //| .BinaryTree = {. 5 .}
   t1.add(5)
-    .add(3)                                       //> res1: coursera.functional_programming_principles.week_3_class_hierarchies.Bi
-                                                  //| naryTree = {{. 3 .} 5 .}
+    .add(3)                                       //> res1: coursera.functional_programming_principles.week_3_data_and_abstraction
+                                                  //| .BinaryTree = {{. 3 .} 5 .}
   val t2 = t1.add(5)
              .add(3)
              .add(1)
@@ -15,8 +15,8 @@ object binary_tree {
              .add(7)
              .add(4)
              .add(8)
-             .add(5)                              //> t2  : coursera.functional_programming_principles.week_3_class_hierarchies.Bi
-                                                  //| naryTree = {{{. 1 {. 2 .}} 3 {. 4 .}} 5 {. 7 {. 8 .}}}
+             .add(5)                              //> t2  : coursera.functional_programming_principles.week_3_data_and_abstraction
+                                                  //| .BinaryTree = {{{. 1 {. 2 .}} 3 {. 4 .}} 5 {. 7 {. 8 .}}}
              
   t2.contains(5)                                  //> res2: Boolean = true
   t2.contains(1)                                  //> res3: Boolean = true
@@ -27,12 +27,12 @@ object binary_tree {
                         .add(9)
                         .add(7)
                         .add(11)
-                        .add(14)                  //> t3  : coursera.functional_programming_principles.week_3_class_hierarchies.Bi
-                                                  //| naryTree = {{{. 7 .} 8 {. 9 .}} 10 {. 11 {. 14 .}}}
+                        .add(14)                  //> t3  : coursera.functional_programming_principles.week_3_data_and_abstraction
+                                                  //| .BinaryTree = {{{. 7 .} 8 {. 9 .}} 10 {. 11 {. 14 .}}}
                       
-  t2.union(t3)                                    //> res5: coursera.functional_programming_principles.week_3_class_hierarchies.Bi
-                                                  //| naryTree = {{{{{. 1 {. 2 .}} 3 {. 4 {. 5 .}}} 7 .} 8 {. 9 .}} 10 {. 11 {. 14
-                                                  //|  .}}}
+  t2.union(t3)                                    //> res5: coursera.functional_programming_principles.week_3_data_and_abstraction
+                                                  //| .BinaryTree = {{{{{. 1 {. 2 .}} 3 {. 4 {. 5 .}}} 7 .} 8 {. 9 .}} 10 {. 11 {.
+                                                  //|  14 .}}}
 }
 
 abstract class BinaryTree {
