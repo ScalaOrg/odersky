@@ -20,45 +20,19 @@ object linked_list {
   l6.nth(3)                                       //> res1: Int = 3
   l6.nth(9)                                       //> java.lang.IndexOutOfBoundsException: element does not exist for index 3
                                                   //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
-                                                  //| n.EmptyList.nth(coursera.functional_programming_principles.week_3_data_and_a
-                                                  //| bstraction.linked_list.scala:27)
+                                                  //| n.EmptyList.nth(List.scala:14)
                                                   //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
-                                                  //| n.EmptyList.nth(coursera.functional_programming_principles.week_3_data_and_a
-                                                  //| bstraction.linked_list.scala:23)
+                                                  //| n.EmptyList.nth(List.scala:10)
                                                   //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
-                                                  //| n.NonEmptyList.nth(coursera.functional_programming_principles.week_3_data_an
-                                                  //| d_abstraction.linked_list.scala:38)
+                                                  //| n.NonEmptyList.nth(List.scala:25)
                                                   //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
-                                                  //| n.NonEmptyList.nth(coursera.functional_programming_principles.week_3_data_an
-                                                  //| d_abstraction.linked_list.scala:38)
+                                                  //| n.NonEmptyList.nth(List.scala:25)
                                                   //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
-                                                  //| n.NonEmptyList.nth(coursera.functional_programming_p
-                                                  //| Output exceeds cutoff limit.
-}
-
-trait List[T] {
-  def isEmpty: Boolean
-  def item: T
-  def tail: List[T]
-  def nth(index: Int): T
-}
-
-class EmptyList[T] extends List[T] {
-  def isEmpty = true
-  def item: Nothing = throw new NoSuchElementException("no item in empty list")
-  def tail: Nothing = throw new NoSuchElementException("no tail of an empty list")
-  def nth(index: Int) = throw new IndexOutOfBoundsException(s"element does not exist for index $index")
-  
-  override def toString = "."
-}
-
-class NonEmptyList[T](val item: T, val tail: List[T]) extends List[T] {
-  def isEmpty: Boolean = false
-  def nth(index: Int) =
-    if (index == 0)
-      item
-    else
-      tail.nth(index - 1)
-  
-  override def toString = s"$item -> $tail"
+                                                  //| n.NonEmptyList.nth(List.scala:25)
+                                                  //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
+                                                  //| n.NonEmptyList.nth(List.scala:25)
+                                                  //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
+                                                  //| n.NonEmptyList.nth(List.scala:25)
+                                                  //| 	at coursera.functional_programming_principles.week_3_data_and_abstractio
+                                                  //| n.NonEmptyList.nth(List.scala:25)
 }
