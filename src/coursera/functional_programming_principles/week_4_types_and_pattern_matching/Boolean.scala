@@ -1,4 +1,4 @@
-package week_4_types_and_pattern_matching
+package coursera.functional_programming_principles.week_4_types_and_pattern_matching
 
 abstract class Boolean {
   def ifThenElse[T](thenPart: => T, elsePart: => T): T
