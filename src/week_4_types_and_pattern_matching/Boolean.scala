@@ -4,6 +4,8 @@ abstract class Boolean {
   def ifThenElse[T](thenPart: => T, elsePart: => T): T
   
   def < (other: Boolean): Boolean = ifThenElse(False, other)
+  
+  def unary_! = ifThenElse(False, True)
 }
 
 object True extends Boolean {
