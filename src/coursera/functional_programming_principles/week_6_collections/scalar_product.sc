@@ -1,4 +1,4 @@
-package week_6_collections
+package coursera.functional_programming_principles.week_6_collections
 
 object scalar_product {
   def list1 = List(1, 2, 3)                       //> list1: => List[Int]

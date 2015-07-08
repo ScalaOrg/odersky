@@ -1,4 +1,4 @@
-package week_6_collections
+package coursera.functional_programming_principles.week_6_collections
 
 object prime {
   def isPrime(n: Int): Boolean = {
